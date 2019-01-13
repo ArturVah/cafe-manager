@@ -1,0 +1,94 @@
+POST localhost:8080/users
+Content-Type: application/json
+
+{
+	"name":  "John1",
+	"surname":  "Vahanyan1",
+	"email":  "john.vaganyan96@gmail.com1",
+    "password": "Barcamessi1",
+	"role":  0
+}
+
+###
+
+
+POST localhost:8080/tables
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhcnR1ci52YWdhbnlhbjk2QGdtYWlsLmNvbSIsIkF1dGhvcml0aWVzIjpbIldBSVRFUiJdLCJpZCI6MSwiZXhwIjoxNTQ3NDc5MDExfQ.RFg5giwNKxW5ggcmNWas50E2KgcwnUYTASB6LUf69afmlKX5LXS5J6-a6lP_79n-WlzXf_4A_HdfKWYIcVW9kA
+
+{
+  "seats": 7
+}
+###
+
+
+POST localhost:8080/products
+Content-Type: application/json
+
+{
+  "name":  "Cola",
+  "price":  "250"
+}
+
+###
+POST localhost:8080/products
+Content-Type: application/json
+
+{
+  "name":  "Fanta",
+  "price":  "250"
+}
+
+###
+POST localhost:8080/orders
+Content-Type: application/json
+
+{
+  "tableId":  "9",
+  "waiterId":  "4",
+  "productsInOrder":  [
+    {
+      "productId": 3,
+      "quantity": 43,
+      "orderProductStatus": 0
+    },
+    {
+      "productId": 2,
+      "quantity": 433,
+      "orderProductStatus": 0
+    }
+  ],
+  "orderStatus":  0
+}
+
+###
+PUT localhost:8080/tables/table/1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLnZhZ2FueWFuOTZAZ21haWwuY29tMSIsIkF1dGhvcml0aWVzIjpbIk1BTkFHRVIiXSwiaWQiOjQsImV4cCI6MTU0NzQ4MDEwOH0._-Nj4GYWzxHskFtr_-0FWsfH5_tM-V_c_sWsm4t5rnD7bHRlDcVGpc_Gnccs7jiP4prFRwgNLncahwPrK2ZoTQ
+
+{
+  "waiterId":  "1"
+}
+
+###
+
+PUT localhost:8080/orders/22/products
+Content-Type: application/json
+
+{
+  "productId": 2,
+  "quantity": 679,
+  "orderProductStatus": 0
+}
+
+###
+PUT localhost:8080/orders/35
+Content-Type: application/json
+
+{
+  "tableId":  "8",
+  "waiterId":  "2",
+  "orderStatus":  0
+}
+
+###
